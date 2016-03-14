@@ -1,0 +1,22 @@
+<%= form_for @actor do |f| %>
+  <%= render 'layouts/error_messages', object: f.object %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name %>
+  <%= f.label :bio, "Bio" %>
+  <%= f.text_area :bio %>
+  <%= f.label :birth_date, "Death _Date" %>
+  <%= f.date_field :birth_date %>
+  <%= f.label :birth_place, "Birth _Place" %>
+  <%= f.text_field :birth_place %>
+  <%= f.label :image_url, "Image" %>
+  <%= f.text_field :image_url %>
+  <%= f.label :alive, "alive" %>
+  <%= f.check_box :alive %>
+  <%= f.label :death_date, "Death _Date" %>
+  <%= f.date_field :death_date %>
+  <%= f.label :death_place, "Birth _Place" %>
+  <%= f.text_field :death_place %>
+  <%= f.submit "send", :disable_with => 'sending...' %>
+<% end %>
+
+
