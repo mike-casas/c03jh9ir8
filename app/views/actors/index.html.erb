@@ -1,0 +1,16 @@
+
+<% @actors.each do |a| %>
+<ul>
+
+  <li><img src=<%= a.image_url %> alt="<%= a.name %>"></li>
+  <li><%= a.name %></li>
+  <li><%= a.bio %></li>
+  <li><%= a.birth_date %></li>
+  <li><%= a.birth_place %></li>
+  <% unless a.alive  %>
+    <li><%= a.death_date %></li>
+    <li><%= a.death_place %></li>
+  <% end %>
+</ul>
+
+<% end %>
